@@ -1,29 +1,20 @@
-# Create T3 App
+# I am finally giving up on Next-Auth
+I tried so many times just to use this library and get the auth working on projects. But it's just too much of a hassle to get it working. I am going to try something else. 
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+With this project, I tried a library I never heard of, Lucia Auth. And I will say, oh god, I get it to work in just half an hour. It is so much easy and staright forward. 
 
-## What's next? How do I make an app with this?
+## Reason why LuciaAuth is better
+**Level of abstraction it provides** NextAuth tries to simplify the auth process by giving so much abstraction that it is hard to understand the flow of the authentication beneath it. It might be easy for someone who is already familiar with the library, but for someone who is new to it, it is a nightmare. LuciaAuth, on the other hand, provides a very simple API to work with.
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+It let me impliment my own workflow and takes up the hard things on it own, basically, session management. Since I myself wrote the code for authentication, I can easily control the flow and the auth myself. 
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## I am not saying NextAuth is bad
+AuthJS (Next-Auth) is a great library and its stars on github and people using it are the proof of it. But in my opinion, it does not provide much of flexibility to the owner of the application. 
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+It is great for someone who want to impliment auth very easy and has a very straight forward process for this. I think it's biggest drawback is its documentation. It's just very messy and hard to read and follow. Guide do not provide much of information about the setup and all and if you go to API reference, then there is so big documents that you can not find the thing you are looking for. 
 
-## Learn More
+AuthJS is not for someone who like to experiment with his data flow and managing the data. I tried it with prisma and postgres, and it was a breeze but when i try it with mongo, then it was kinda hard. It was throwing such random error that i was not being able to understand what is wrong.
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+## Conclusion
+Simply saying, LuciaJS is the Tailwind of authentication and AuthJS is kinda like BootStrap!
+And I prefer Tailwind.
