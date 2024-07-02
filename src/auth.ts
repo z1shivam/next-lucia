@@ -20,7 +20,6 @@ export const lucia = new Lucia(adapter, {
   },
   getUserAttributes: (attributes) => {
     return {
-      // attributes has the type of DatabaseUserAttributes
       username: attributes.username,
     };
   },
@@ -35,10 +34,7 @@ export const validateRequest = cache(
 				session: null
 			};
 		}
-
 		const result = await lucia.validateSession(sessionId);
-    console.log(`shviam`);
-		// next.js throws when you attempt to set cookie when rendering page
 		try {
 			if (result.session && result.session.fresh) {
 				const sessionCookie = lucia.createSessionCookie(result.session.id);
@@ -52,8 +48,6 @@ export const validateRequest = cache(
 		return result;
 	}
 );
-
-
 
 declare module "lucia" {
   interface Register {

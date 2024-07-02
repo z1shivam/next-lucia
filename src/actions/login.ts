@@ -7,7 +7,6 @@ import { redirect } from "next/navigation";
 import User, { IUser } from "@/models/userModel";
 import mongoConnect from "@/lib/mongoConnect";
 
-export default async function Page() {}
 
 export async function login(_: any, formData: FormData) {
 	const username = formData.get("username");
